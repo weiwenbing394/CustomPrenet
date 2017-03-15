@@ -1,38 +1,40 @@
 //
-//  ViewController.m
+//  ShangjiaController.m
 //  CustomPresentViewController
 //
-//  Created by 大家保 on 2017/3/14.
+//  Created by 大家保 on 2017/3/15.
 //  Copyright © 2017年 大家保. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ShangjiaController.h"
 #import "ImageViewCell.h"
-#import "DetailViewController.h"
 #import "AppDelegate.h"
+#import "TestController.h"
 #define SCREENWIDTH  [[UIScreen mainScreen] bounds].size.width
 #define SCREENHEIGHT [[UIScreen mainScreen] bounds].size.height
 
+
 static NSString *const indentifier=@"cell";
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@interface ShangjiaController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
-@implementation ViewController
+@implementation ShangjiaController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets=NO;
     
     UIButton *leftButtom=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
     [leftButtom setImage:[UIImage imageNamed:@"会员头像"] forState:0];
     [leftButtom addTarget:self action:@selector(openLeftVC) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:leftButtom];
     
-    
-    self.myTableView= [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-    self.myTableView.dataSource = self;
-    self.myTableView.delegate  = self;
-    [self.view addSubview:self.myTableView];
+    self.myTableView.delegate=self;
+    self.myTableView.dataSource=self;
+    self.myTableView.tableFooterView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 0.001, 0.001)];
+    self.myTableView.tableHeaderView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 0.001, 0.001)];
     [self.myTableView registerClass:[ImageViewCell class] forCellReuseIdentifier:indentifier];
 }
 
@@ -57,7 +59,6 @@ static NSString *const indentifier=@"cell";
     }
 }
 
-
 #pragma mark tableviewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 10;
@@ -68,12 +69,12 @@ static NSString *const indentifier=@"cell";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return SCREENWIDTH*400/750.0;
+    return SCREENWIDTH*387/580.0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ImageViewCell *cell=[tableView dequeueReusableCellWithIdentifier:indentifier];
-    cell.iconImageView.image=[UIImage imageNamed:@"banner"];
+    cell.iconImageView.image=[UIImage imageNamed:@"美女1.jpg"];
     return cell;
 }
 
@@ -88,15 +89,10 @@ static NSString *const indentifier=@"cell";
 #pragma mark tableviewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    ImageViewCell *cell=(id)[tableView cellForRowAtIndexPath:indexPath];
-    CGRect rectInTableView=[tableView rectForRowAtIndexPath:indexPath];
-    CGRect rect=[tableView convertRect:rectInTableView toView:[tableView superview]];
-    
-    DetailViewController *detail=[[DetailViewController alloc]init];
-    detail.resoource=cell.iconImageView.image;
-    detail.startFrame=rect;
-    [self presentViewController:detail animated:YES completion:nil];
+    TestController *testVC=[[TestController alloc]init];
+    testVC.hidesBottomBarWhenPushed=YES;
+    testVC.titleString=@"商家";
+    [self.navigationController pushViewController:testVC animated:YES];
 }
 
 

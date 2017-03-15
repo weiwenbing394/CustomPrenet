@@ -10,7 +10,7 @@
 
 @interface ViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UITableView *myTableView;
+@property (strong, nonatomic) UITableView *myTableView;
 
 @end
 
