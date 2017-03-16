@@ -7,7 +7,6 @@
 //
 
 #import "LeftController.h"
-#import "AppDelegate.h"
 #import "TestController.h"
 #import "DetailViewController.h"
 
@@ -28,6 +27,8 @@
     tableview.delegate  = self;
     tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:tableview];
+    
+    NSLog(@"左侧页出现了");
     
 }
 
@@ -76,9 +77,10 @@
     vc.titleString = [tableView cellForRowAtIndexPath:indexPath].textLabel.text;
     vc.hidesBottomBarWhenPushed = YES;
     
-    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    AppDelegate *tempAppDelegate =KEYAPPDELEGATE;
     [tempAppDelegate.LeftSlideVC closeLeftView];//关闭左侧抽屉
-    [tempAppDelegate.mainTabBarController.selectedViewController pushViewController:vc animated:NO];
+    UITabBarController *tabbar=(UITabBarController *)tempAppDelegate.LeftSlideVC.mainVC;
+    [tabbar.selectedViewController pushViewController:vc animated:NO];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -118,8 +120,9 @@
     vc.resoource=sender.currentBackgroundImage;
     vc.startFrame=rect;
     
-    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [tempAppDelegate.mainTabBarController.selectedViewController presentViewController:vc animated:YES completion:^{
+    AppDelegate *tempAppDelegate = KEYAPPDELEGATE;
+    UITabBarController *tabbar=(UITabBarController *)tempAppDelegate.LeftSlideVC.mainVC;
+    [tabbar.selectedViewController presentViewController:vc animated:YES completion:^{
         [tempAppDelegate.LeftSlideVC closeLeftView];//关闭左侧抽屉
     }];
 }

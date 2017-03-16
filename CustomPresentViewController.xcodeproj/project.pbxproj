@@ -13,8 +13,6 @@
 		516057151E78E336006C44ED /* icon_tabbar_merchant_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5160570C1E78E336006C44ED /* icon_tabbar_merchant_selected@2x.png */; };
 		516057161E78E336006C44ED /* icon_tabbar_mine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5160570D1E78E336006C44ED /* icon_tabbar_mine@2x.png */; };
 		516057171E78E336006C44ED /* icon_tabbar_mine_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5160570E1E78E336006C44ED /* icon_tabbar_mine_selected@2x.png */; };
-		516057181E78E336006C44ED /* icon_tabbar_nearby_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5160570F1E78E336006C44ED /* icon_tabbar_nearby_normal@2x.png */; };
-		516057191E78E336006C44ED /* icon_tabbar_nearby_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 516057101E78E336006C44ED /* icon_tabbar_nearby_selected@2x.png */; };
 		5160571A1E78E336006C44ED /* leftbackiamge.png in Resources */ = {isa = PBXBuildFile; fileRef = 516057111E78E336006C44ED /* leftbackiamge.png */; };
 		516057251E78E446006C44ED /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 516057201E78E446006C44ED /* DetailViewController.m */; };
 		516057261E78E446006C44ED /* ImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 516057241E78E446006C44ED /* ImageViewCell.m */; };
@@ -29,6 +27,7 @@
 		516057421E78ED92006C44ED /* LeftSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 516057411E78ED92006C44ED /* LeftSlideViewController.m */; };
 		516057451E78EDA7006C44ED /* UIView_extra.m in Sources */ = {isa = PBXBuildFile; fileRef = 516057441E78EDA7006C44ED /* UIView_extra.m */; };
 		5160574A1E792909006C44ED /* TestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 516057491E792909006C44ED /* TestController.m */; };
+		519148C41E7A2DAA004254E5 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519148C31E7A2DAA004254E5 /* loginViewController.m */; };
 		51F1824B1E77B1F000A41652 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F1824A1E77B1F000A41652 /* main.m */; };
 		51F1824E1E77B1F000A41652 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F1824D1E77B1F000A41652 /* AppDelegate.m */; };
 		51F182511E77B1F000A41652 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F182501E77B1F000A41652 /* ViewController.m */; };
@@ -66,8 +65,6 @@
 		5160570C1E78E336006C44ED /* icon_tabbar_merchant_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tabbar_merchant_selected@2x.png"; sourceTree = "<group>"; };
 		5160570D1E78E336006C44ED /* icon_tabbar_mine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tabbar_mine@2x.png"; sourceTree = "<group>"; };
 		5160570E1E78E336006C44ED /* icon_tabbar_mine_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tabbar_mine_selected@2x.png"; sourceTree = "<group>"; };
-		5160570F1E78E336006C44ED /* icon_tabbar_nearby_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tabbar_nearby_normal@2x.png"; sourceTree = "<group>"; };
-		516057101E78E336006C44ED /* icon_tabbar_nearby_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tabbar_nearby_selected@2x.png"; sourceTree = "<group>"; };
 		516057111E78E336006C44ED /* leftbackiamge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftbackiamge.png; sourceTree = "<group>"; };
 		5160571F1E78E446006C44ED /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		516057201E78E446006C44ED /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
@@ -90,6 +87,9 @@
 		516057441E78EDA7006C44ED /* UIView_extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIView_extra.m; sourceTree = "<group>"; };
 		516057481E792909006C44ED /* TestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestController.h; sourceTree = "<group>"; };
 		516057491E792909006C44ED /* TestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestController.m; sourceTree = "<group>"; };
+		519148C21E7A2DAA004254E5 /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
+		519148C31E7A2DAA004254E5 /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
+		519148C61E7A3707004254E5 /* Resource.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Resource.pch; sourceTree = "<group>"; };
 		51F182461E77B1F000A41652 /* CustomPresentViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomPresentViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51F1824A1E77B1F000A41652 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		51F1824C1E77B1F000A41652 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -153,8 +153,6 @@
 				5160570C1E78E336006C44ED /* icon_tabbar_merchant_selected@2x.png */,
 				5160570D1E78E336006C44ED /* icon_tabbar_mine@2x.png */,
 				5160570E1E78E336006C44ED /* icon_tabbar_mine_selected@2x.png */,
-				5160570F1E78E336006C44ED /* icon_tabbar_nearby_normal@2x.png */,
-				516057101E78E336006C44ED /* icon_tabbar_nearby_selected@2x.png */,
 				516057111E78E336006C44ED /* leftbackiamge.png */,
 			);
 			path = "图片";
@@ -163,39 +161,24 @@
 		5160571C1E78E446006C44ED /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				5160571D1E78E446006C44ED /* Base */,
 				5160571E1E78E446006C44ED /* Controller */,
-				516057211E78E446006C44ED /* Model */,
 				516057221E78E446006C44ED /* View */,
 			);
 			path = Class;
 			sourceTree = "<group>";
 		};
-		5160571D1E78E446006C44ED /* Base */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
 		5160571E1E78E446006C44ED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				516057471E7928E6006C44ED /* 测试 */,
-				516057381E78E920006C44ED /* 侧滑 */,
+				519148C11E7A2D97004254E5 /* 登陆 */,
+				516057471E7928E6006C44ED /* 测试页面 */,
+				516057381E78E920006C44ED /* 左侧页面 */,
 				516057311E78E880006C44ED /* 我 */,
 				516057301E78E872006C44ED /* 商家 */,
 				5160572F1E78E866006C44ED /* 主页 */,
 				516057461E7928D0006C44ED /* 自定义presentController */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		516057211E78E446006C44ED /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		516057221E78E446006C44ED /* View */ = {
@@ -258,13 +241,13 @@
 			name = "我";
 			sourceTree = "<group>";
 		};
-		516057381E78E920006C44ED /* 侧滑 */ = {
+		516057381E78E920006C44ED /* 左侧页面 */ = {
 			isa = PBXGroup;
 			children = (
 				516057391E78E93E006C44ED /* LeftController.h */,
 				5160573A1E78E93E006C44ED /* LeftController.m */,
 			);
-			name = "侧滑";
+			name = "左侧页面";
 			sourceTree = "<group>";
 		};
 		516057461E7928D0006C44ED /* 自定义presentController */ = {
@@ -276,13 +259,30 @@
 			name = "自定义presentController";
 			sourceTree = "<group>";
 		};
-		516057471E7928E6006C44ED /* 测试 */ = {
+		516057471E7928E6006C44ED /* 测试页面 */ = {
 			isa = PBXGroup;
 			children = (
 				516057481E792909006C44ED /* TestController.h */,
 				516057491E792909006C44ED /* TestController.m */,
 			);
-			name = "测试";
+			name = "测试页面";
+			sourceTree = "<group>";
+		};
+		519148C11E7A2D97004254E5 /* 登陆 */ = {
+			isa = PBXGroup;
+			children = (
+				519148C21E7A2DAA004254E5 /* loginViewController.h */,
+				519148C31E7A2DAA004254E5 /* loginViewController.m */,
+			);
+			name = "登陆";
+			sourceTree = "<group>";
+		};
+		519148C51E7A36DE004254E5 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				519148C61E7A3707004254E5 /* Resource.pch */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		51F1823D1E77B1F000A41652 = {
@@ -308,6 +308,7 @@
 		51F182481E77B1F000A41652 /* CustomPresentViewController */ = {
 			isa = PBXGroup;
 			children = (
+				519148C51E7A36DE004254E5 /* Resource */,
 				5160571C1E78E446006C44ED /* Class */,
 				51F182851E77C96E00A41652 /* Tool */,
 				516057081E78E336006C44ED /* 图片 */,
@@ -470,12 +471,10 @@
 				5160572E1E78E7B9006C44ED /* 会员头像@3x.png in Resources */,
 				51F182591E77B1F000A41652 /* LaunchScreen.storyboard in Resources */,
 				516057121E78E336006C44ED /* icon_tabbar_homepage@2x.png in Resources */,
-				516057191E78E336006C44ED /* icon_tabbar_nearby_selected@2x.png in Resources */,
 				5160573E1E78EBE1006C44ED /* 美女1.jpg in Resources */,
 				5160572D1E78E7B9006C44ED /* 会员头像@2x.png in Resources */,
 				516057141E78E336006C44ED /* icon_tabbar_merchant_normal@2x.png in Resources */,
 				5160571A1E78E336006C44ED /* leftbackiamge.png in Resources */,
-				516057181E78E336006C44ED /* icon_tabbar_nearby_normal@2x.png in Resources */,
 				51F182561E77B1F000A41652 /* Assets.xcassets in Resources */,
 				516057131E78E336006C44ED /* icon_tabbar_homepage_selected@2x.png in Resources */,
 				51F182541E77B1F000A41652 /* Main.storyboard in Resources */,
@@ -505,6 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51F1828E1E77DA0800A41652 /* UIImage+ImageEffects.m in Sources */,
+				519148C41E7A2DAA004254E5 /* loginViewController.m in Sources */,
 				5160574A1E792909006C44ED /* TestController.m in Sources */,
 				516057371E78E8AE006C44ED /* MeController.m in Sources */,
 				51F182881E77C98000A41652 /* XWInteractiveTransition.m in Sources */,
@@ -664,6 +664,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = CustomPresentViewController/Resource/Resource.pch;
 				INFOPLIST_FILE = CustomPresentViewController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dajiabao.CustomPresentViewController;
@@ -675,6 +676,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = CustomPresentViewController/Resource/Resource.pch;
 				INFOPLIST_FILE = CustomPresentViewController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dajiabao.CustomPresentViewController;

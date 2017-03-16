@@ -73,6 +73,8 @@
         [self.view addSubview:self.mainVC.view];
         //初始时侧滑关闭
         self.closed=YES;
+        
+        NSLog(@"侧滑控制器创建了");
     }
     return self;
 };
@@ -236,6 +238,8 @@
     
 }
 
-
+- (void)dealloc{
+    NSLog(@"侧滑控制器释放了");
+}
 
 @end

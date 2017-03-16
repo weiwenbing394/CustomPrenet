@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "LeftController.h"
-
+#import "loginViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,17 +18,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    //主视图
-    self.mainTabBarController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"basrTabbar"];
-    //左侧视图
-    LeftController *leftVC=[[LeftController alloc]init];
-    //侧滑控制器
-    self.LeftSlideVC = [[LeftSlideViewController alloc] initWithLeftView:leftVC andMainView:self.mainTabBarController];
-  
-    self.window.rootViewController = self.LeftSlideVC;
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[loginViewController alloc]init]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (LeftSlideViewController *)LeftSlideVC{
+    if (!_LeftSlideVC) {
+        //主页面
+        UITabBarController * mainTabBarController=[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"basrTabbar"];
+        //左侧页面
+        LeftController *leftVC=[[LeftController alloc]init];
+        //侧滑控制器
+        _LeftSlideVC= [[LeftSlideViewController alloc] initWithLeftView:leftVC andMainView:mainTabBarController];
+    }
+    return _LeftSlideVC;
 }
 
 

@@ -11,4 +11,5 @@
 @interface ShangjiaController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
+
 @end

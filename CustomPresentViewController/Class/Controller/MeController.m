@@ -8,10 +8,8 @@
 
 #import "MeController.h"
 #import "ImageViewCell.h"
-#import "AppDelegate.h"
 #import "TestController.h"
-#define SCREENWIDTH  [[UIScreen mainScreen] bounds].size.width
-#define SCREENHEIGHT [[UIScreen mainScreen] bounds].size.height
+
 
 static NSString *const indentifier=@"cell";
 
@@ -38,7 +36,7 @@ static NSString *const indentifier=@"cell";
 }
 
 - (void)openLeftVC{
-    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    AppDelegate *tempAppDelegate = KEYAPPDELEGATE;
     if ([tempAppDelegate.LeftSlideVC closed]) {
         [tempAppDelegate.LeftSlideVC openLeftView];
     }else{
@@ -48,13 +46,13 @@ static NSString *const indentifier=@"cell";
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    AppDelegate *tempAppDelegate =KEYAPPDELEGATE;
     [tempAppDelegate.LeftSlideVC setPanEnabled:NO];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    AppDelegate *tempAppDelegate = KEYAPPDELEGATE;
     [tempAppDelegate.LeftSlideVC setPanEnabled:YES];
 }
 

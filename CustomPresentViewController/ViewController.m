@@ -9,9 +9,8 @@
 #import "ViewController.h"
 #import "ImageViewCell.h"
 #import "DetailViewController.h"
-#import "AppDelegate.h"
-#define SCREENWIDTH  [[UIScreen mainScreen] bounds].size.width
-#define SCREENHEIGHT [[UIScreen mainScreen] bounds].size.height
+
+
 
 static NSString *const indentifier=@"cell";
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -34,22 +33,24 @@ static NSString *const indentifier=@"cell";
     self.myTableView.delegate  = self;
     [self.view addSubview:self.myTableView];
     [self.myTableView registerClass:[ImageViewCell class] forCellReuseIdentifier:indentifier];
+    
+    NSLog(@"主页出现了");
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    AppDelegate *tempAppDelegate =KEYAPPDELEGATE;
     [tempAppDelegate.LeftSlideVC setPanEnabled:NO];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    AppDelegate *tempAppDelegate =KEYAPPDELEGATE;
     [tempAppDelegate.LeftSlideVC setPanEnabled:YES];
 }
 
 - (void)openLeftVC{
-    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    AppDelegate *tempAppDelegate = KEYAPPDELEGATE;
     if ([tempAppDelegate.LeftSlideVC closed]) {
         [tempAppDelegate.LeftSlideVC openLeftView];
     }else{
