@@ -667,7 +667,7 @@
 				GCC_PREFIX_HEADER = CustomPresentViewController/Resource/Resource.pch;
 				INFOPLIST_FILE = CustomPresentViewController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dajiabao.CustomPresentViewController;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dajiabao.qqcehua;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -679,7 +679,7 @@
 				GCC_PREFIX_HEADER = CustomPresentViewController/Resource/Resource.pch;
 				INFOPLIST_FILE = CustomPresentViewController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dajiabao.CustomPresentViewController;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dajiabao.qqcehua;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -32,6 +32,7 @@
         LeftController *leftVC=[[LeftController alloc]init];
         //侧滑控制器
         _LeftSlideVC= [[LeftSlideViewController alloc] initWithLeftView:leftVC andMainView:mainTabBarController];
+        _LeftSlideVC.pantype=typeWithCenter;
     }
     return _LeftSlideVC;
 }
