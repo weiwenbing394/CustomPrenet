@@ -39,6 +39,8 @@
         self.speedf=vSpeedFloat;
         self.leftVC=leftVC;
         self.mainVC=mainVC;
+        [self addChildViewController:self.leftVC];
+        [self addChildViewController:self.mainVC];
         
         //左侧蒙版
         UIView *view=[[UIView alloc]init];
@@ -60,8 +62,13 @@
         self.leftTableview.transform=CGAffineTransformMakeScale(kLeftScale, kLeftScale);
         self.leftTableview.center=CGPointMake(kLeftCenterX, kScreenHeight*0.5);
         
+        //设置主视图的位置
+        self.mainVC.view.frame=self.view.bounds;
+        
         [self.view addSubview:self.leftVC.view];
         [self.view addSubview:self.mainVC.view];
+        [self.leftVC didMoveToParentViewController:self];
+        [self.mainVC didMoveToParentViewController:self];
         //初始时侧滑关闭
         self.closed=YES;
         
@@ -111,6 +118,7 @@
         //右界面
         CGFloat scale=1-(1-kMainPageScale)*(rec.view.frame.origin.x/(kScreenWidth-kMainPageDistance));
         rec.view.transform=CGAffineTransformScale(CGAffineTransformIdentity,scale, scale);
+        //清除手势移动的距离
         [rec setTranslation:CGPointMake(0, 0) inView:self.view];
         
         //左侧界面
@@ -289,6 +297,31 @@
     [self.pan setEnabled:enabled];
 };
 
+/**
+ *  弹出presentViewController
+ */
+- (void)sliderViewControllerPresntViewController:(UIViewController *)topViewController animatd:(BOOL)aanimated{
+    if (topViewController==nil) {
+        return;
+    }
+    UITabBarController *tabbar=(UITabBarController *)self.mainVC;
+    [tabbar.selectedViewController presentViewController:topViewController animated:aanimated completion:^{
+        [self closeLeftView];//关闭左侧抽屉
+    }];
+};
+
+/**
+ *  push一个viewcontroller
+ */
+- (void)sliderViewControllerPushViewController:(UIViewController *)topViewController animatd:(BOOL)aanimated{
+    if (topViewController==nil) {
+        return;
+    }
+    [self closeLeftView];//关闭左侧抽屉
+    UITabBarController *tabbar=(UITabBarController *)self.mainVC;
+    [tabbar.selectedViewController pushViewController:topViewController animated:aanimated];
+};
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -297,5 +330,12 @@
 - (void)dealloc{
     NSLog(@"侧滑控制器释放了");
 }
+
+//摇动手势
+//- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+//    if (event.subtype==UIEventSubtypeMotionShake) {
+//        NSLog(@"摇一摇，摇到外婆桥");
+//    }
+//}
 
 @end

@@ -78,9 +78,7 @@
     vc.hidesBottomBarWhenPushed = YES;
     
     AppDelegate *tempAppDelegate =KEYAPPDELEGATE;
-    [tempAppDelegate.LeftSlideVC closeLeftView];//关闭左侧抽屉
-    UITabBarController *tabbar=(UITabBarController *)tempAppDelegate.LeftSlideVC.mainVC;
-    [tabbar.selectedViewController pushViewController:vc animated:NO];
+    [tempAppDelegate.LeftSlideVC sliderViewControllerPushViewController:vc animatd:NO];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -121,10 +119,7 @@
     vc.startFrame=rect;
     
     AppDelegate *tempAppDelegate = KEYAPPDELEGATE;
-    UITabBarController *tabbar=(UITabBarController *)tempAppDelegate.LeftSlideVC.mainVC;
-    [tabbar.selectedViewController presentViewController:vc animated:YES completion:^{
-        [tempAppDelegate.LeftSlideVC closeLeftView];//关闭左侧抽屉
-    }];
+    [tempAppDelegate.LeftSlideVC sliderViewControllerPresntViewController:vc animatd:YES];
 }
 
 
